@@ -14,7 +14,7 @@ public class SharedDriver {
     public SharedDriver() {
     }
 
-    public void initialize() {
+    public void initialize() throws Exception {
         if (DriverFactory.getDriver() == null) {
 
             WebDriver driver;
@@ -53,7 +53,7 @@ public class SharedDriver {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("--window-size=1920,1080");
 
-                driver = new ChromeDriver(option);
+                driver = new CustomChromeDriver(option);
             }
 
             driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);

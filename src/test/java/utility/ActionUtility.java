@@ -62,4 +62,9 @@ public class ActionUtility {
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         return (String) jsExecutor.executeScript("return arguments[0].validationMessage;", element);
     }
+
+    public void scrollToElement(By by) {
+        js.executeScript("arguments[0].scrollIntoView(false);", driver.findElement(by));
+        waitUtility.sleep(200);
+    }
 }

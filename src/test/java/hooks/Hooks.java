@@ -14,7 +14,7 @@ public class Hooks extends StepHelper {
     }
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         driver.initialize();
     }
 

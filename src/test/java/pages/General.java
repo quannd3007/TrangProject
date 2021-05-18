@@ -9,4 +9,8 @@ public class General extends BasePage {
         waitUtility.waitForPageLoad();
     }
 
+    public void goToCartPage() {
+        driver.get("http://trang-project.herokuapp.com/cart");
+        waitUtility.waitForPageLoad();
+    }
 }

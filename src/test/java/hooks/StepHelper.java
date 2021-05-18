@@ -1,5 +1,6 @@
 package hooks;
 
+import driver.CustomSeleniumDriver;
 import driver.DriverFactory;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -13,10 +14,10 @@ public class StepHelper {
 
     public void saveScreenshot() {
         try {
-            Allure.getLifecycle().addAttachment("Page Screenshot", "image/png", "png", ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES));
+            Allure.getLifecycle().addAttachment("Page Screenshot", "image/png", "png", ((CustomSeleniumDriver) DriverFactory.getDriver()).takeScreenShot());
         } catch (Exception e) {
             try {
-                Allure.getLifecycle().addAttachment("Page Screenshot", "image/png", "png", ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES));
+                Allure.getLifecycle().addAttachment("Page Screenshot", "image/png", "png", ((CustomSeleniumDriver) DriverFactory.getDriver()).screenShot());
             } catch (Exception ex) {
             }
         }
