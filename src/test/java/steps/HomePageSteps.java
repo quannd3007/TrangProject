@@ -46,4 +46,39 @@ public class HomePageSteps {
 
         homePage.addToCart(map.get("name"), map.get("price"));
     }
+
+    @And("click on button Giỏ hàng của tôi")
+    public void clickOnButtonMyCart() {
+        homePage.clickMyCartButton();
+    }
+
+    @And("^click on (.+?) brand in menu bar$")
+    public void clickOnABrandInMenuBar(String branch) {
+        homePage.clickOnABrandInMenuBar(branch);
+    }
+
+    @Then("^the screen displays products match with (.+?) branch$")
+    public void theScreenDisplaysProductsMatchWithBranch(String branch) throws Exception {
+        Assert.assertTrue("Still have product that does not match with " + branch + " branch", homePage.checkListProductDisplayMatchWithBranchAllPage(branch));
+    }
+
+    @And("^search products with price (.+?) on left menu$")
+    public void searchProductsWithInLeftMenu(String price) {
+        homePage.searchProductsWithInLeftMenu(price);
+    }
+
+    @Then("^the screen displays products match with (.+?) price")
+    public void theScreenDisplaysProductsMatchWithPrice(String price) throws Exception {
+        Assert.assertTrue("Still have product that does not match with " + price + " price", homePage.checkListProductDisplayMatchWithPriceAllPage(price));
+    }
+
+    @And("^search products with discount (.+?) on left menu$")
+    public void searchProductsWithDiscountInLeftMenu(String discount) {
+        homePage.searchProductsWithInLeftMenu(discount);
+    }
+
+    @Then("^the screen displays products match with (.+?) discount")
+    public void theScreenDisplaysProductsMatchWithDiscount(String discount) throws Exception {
+        Assert.assertTrue("Still have product that does not match with " + discount + " discount", homePage.checkListProductDisplayMatchWithDiscountAllPage(discount));
+    }
 }

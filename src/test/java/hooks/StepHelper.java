@@ -12,6 +12,8 @@ import java.nio.file.Paths;
 
 public class StepHelper {
 
+    public static String orderNumber;
+
     public void saveScreenshot() {
         try {
             Allure.getLifecycle().addAttachment("Page Screenshot", "image/png", "png", ((CustomSeleniumDriver) DriverFactory.getDriver()).takeScreenShot());

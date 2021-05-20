@@ -2,6 +2,8 @@
 
 > Website: http://trang-project.herokuapp.com/
 
+> Admin site: http://trang-project.herokuapp.com/admin/login
+
 > Test cases: https://docs.google.com/spreadsheets/d/1dChn0v7fPDBoicTjhIGqNF2_My04sM44KxpfwK2MvYM/edit#gid=0
 
 # Prerequisites

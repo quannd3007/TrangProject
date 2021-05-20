@@ -113,16 +113,17 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <includes>
-<!--                        <include>**/LoginRunner.java</include>-->
-<!--                        <include>**/SearchRunner.java</include>-->
+                        <include>**/LoginRunner.java</include>
+                        <include>**/SearchRunner.java</include>
                         <include>**/CartRunner.java</include>
+                        <include>**/CheckoutRunner.java</include>
                     </includes>
 
-<!--                    <parallel>methods</parallel>-->
-<!--                    <threadCount>1</threadCount>-->
-<!--                    <perCoreThreadCount>true</perCoreThreadCount>-->
-<!--                    <forkCount>1</forkCount>-->
-<!--                    <reuseForks>true</reuseForks>-->
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
+                    <perCoreThreadCount>true</perCoreThreadCount>
+                    <forkCount>2</forkCount>
+                    <reuseForks>true</reuseForks>
                 </configuration>
                 <dependencies>
                     <dependency>

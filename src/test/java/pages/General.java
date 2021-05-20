@@ -13,4 +13,14 @@ public class General extends BasePage {
         driver.get("http://trang-project.herokuapp.com/cart");
         waitUtility.waitForPageLoad();
     }
+
+    public void goToLoginAdminPage() {
+        driver.get("http://trang-project.herokuapp.com/admin/login");
+        waitUtility.waitForPageLoad();
+    }
+
+    public void goToAdminAllOrderPage() {
+        driver.get("http://trang-project.herokuapp.com/admin/order");
+        waitUtility.waitForPageLoad();
+    }
 }
